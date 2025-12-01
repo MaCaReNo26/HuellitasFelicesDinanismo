@@ -183,6 +183,7 @@ nav a:hover {
 .inicio h2 {
     font-size: 40px;
     margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 /* TARJETAS CENTRADAS Y EN UNA FILA */
@@ -923,4 +924,5 @@ footer {
         max-width: 350px;
     }
 }
+
 
