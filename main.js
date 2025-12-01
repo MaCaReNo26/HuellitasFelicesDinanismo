@@ -199,7 +199,7 @@ if (document.getElementById("datosMascota")) {
         contenedor.innerHTML = `
             <div class="tarjeta-registrada">
                 <h3>${ultima.nombreMascota}</h3>
-                <img src="${ultima.foto}" alt="${ultima.nombreMascota}">
+                <img src="${ultima.foto}" alt="${ultima.nombreMascota}" class="foto-perfil">
                 <p><strong>Raza:</strong> ${ultima.raza}</p>
                 <p><strong>Edad:</strong> ${ultima.edad}</p>
                 <p><strong>Género:</strong> ${ultima.genero}</p>
@@ -337,3 +337,4 @@ document.addEventListener("DOMContentLoaded", function () {
         img.src = imagenes[index];
     });
 });
+
