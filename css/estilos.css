@@ -862,3 +862,55 @@ footer {
 .regresar:hover {
     background: var(--azul-oscuro);
 }
+
+/* === RESPONSIVE GENERAL === */
+@media (max-width: 768px) {
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Banner */
+    .banner img {
+        width: 180px;
+        position: static;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .banner h2 {
+        font-size: 24px;
+    }
+
+    /* Tarjetas inicio */
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caja {
+        width: 90%;
+    }
+
+    /* Tarjetas adopción */
+    .contenedor-mascotas {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width: 90%;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    /* Contactos */
+    .texto-contacto {
+        text-align: center;
+    }
+
+    .mapa iframe {
+        width: 100%;
+        max-width: 350px;
+    }
+}
