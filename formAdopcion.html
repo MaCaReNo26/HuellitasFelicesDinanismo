@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellitas Felices</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <!-- Finalizacion de Adopcion -->
+    <div class="caja-adopcion">
+        <h2>Confirmar la adopcion de la mascotita</h2>
+        <h4>Recuerda se pasara por un proceso el cual se enviara
+            tu número de telefono a la persona dueña de la mascota para que se pongan en
+            contacto contigo y dar por finalizada la adopcion.
+        </h4>
+        <div class="button-formAdopcion">
+            <button type="button" class="cancelar" onclick="window.location.href='adopta.html'">Cancelar</button>
+             <button type="button" class="aceptar" onclick="mostrarMensaje()">Aceptar</button>
+            <h1 id="mensajeFelicidades" style="display:none;">
+                ¡Felicidades por adoptar a nuestra linda mascota!<br>
+                <i>Dale un hogar lleno de amor</i><br><br>
+                🐶❤️
+                <button type="button" class="regresar" onclick="window.location.href='index.html'">Regresar al Inicio</button>
+                🐶❤️
+                <img src="IMAGENES HF/gatoBailando.gif" alt="Gatito Bailando">
+            </h1>
+            
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="main.js"></script>
+</body>
+
+</html>

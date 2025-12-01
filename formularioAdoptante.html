@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso Mascotas - Huellitas Felices</title>
+    <link rel="stylesheet" href="css/stylesForms.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Registro en Huellitas Felices 🐾</h1>
+        <p>Ingresa a tu mascota 💕</p>
+
+        <form id="formMascota" action="#" method="post" enctype="multipart/form-data">
+
+            <label for="nombre">Nombre (Dueño):</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+            <label for="usuario">Nombre de la mascota:</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Nombre Mascota" required>
+
+            <label for="telefono">Telefono:</label>
+            <input type="number" id="telefono" name="telefono" placeholder="+593 ..." required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="0" max="100" required>
+
+            <label for="contrasena">Descripcion:</label>
+            <input type="text" id="descripcion" name="descripcion" placeholder="Una descripcion de tu mascota" required>
+            
+            <label for="raza">Raza:</label>
+            <input type="text" id="raza" name="raza" placeholder="Raza de tu mascota" required>
+
+            <label for="genero">Sexo:</label>
+            <select id="genero" name="genero" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Macho">Macho</option>
+                <option value="Hembra">Hembra</option>
+            </select>
+
+            <label for="foto">Sube Foto de tu mascota:</label>
+            <input type="file" id="foto" name="foto" accept="image/*" required>
+
+            <div class="buttons">
+                <button type="button" class="cancelar" onclick="window.location.href='adopta.html'">Cancelar</button>
+                <button type="button" class="registrar" onclick="registrarMascota()">Subir Mascota</button>
+            </div>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

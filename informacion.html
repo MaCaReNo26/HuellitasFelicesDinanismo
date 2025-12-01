@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - Huellitas Felices</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <header>
+    <h1>HUELLITAS FELICES</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="informacion.html">INFORMACIÓN</a></li>
+        <li><a href="adopta.html">ADOPTA</a></li>
+        <li><a href="contacto.html">CONTACTOS</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+    </nav>
+    <!-- Mostrar perfil -->
+    <div class="usuario-header" id="usuarioHeader" style="display:none;">
+      <img id="fotoUsuarioHeader" class="foto-usuario-header" alt="Foto usuario">
+      <span id="nombreUsuarioHeader"></span>
+      <button class="logout-btn" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <section class="nosotros" id="nosotros">
+    <div class="contenido-nosotros">
+      <div class="texto">
+        <img src="IMAGENES HF/Cnegro.png" alt="huellas" class="decoracion">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          Somos estudiantes que queremos ayudar a todas las mascotas que busquen un hogar, 
+          ya sea que lo den en adopción o perritos que se encuentren en una situación de calle. 
+          Queremos brindarles la ayuda que ellos no pueden pedir mediante este sitio web, 
+          que permitirá la adopción de cientos de mascotas.
+        </p>
+      </div>
+      <img id="imgNosotros" src="IMAGENES HF/cuatro.png" alt="Animales" class="animales">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Huellitas Felices - Todos los derechos reservados 🐾</p>
+  </footer>
+  <!-- Script -->
+    <script src="main.js"></script>
+</body>
+</html>

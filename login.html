@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Huellitas Felices</title>
+  <link rel="stylesheet" href="css/stylesLogin.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <h1>HUELLITAS FELICES 🐾</h1>
+    <h2>Iniciar Sesión</h2>
+
+    <form id="formLogin" action="#" method="post">
+      <label>Correo electrónico:</label>
+      <input type="email" id="correoLogin" placeholder="usuario@correo.com" required>
+
+      <label>Contraseña:</label>
+      <input type="password" id="claveLogin" placeholder="••••••••" required>
+
+      <div class="buttons">
+        <button type="submit" class="Ingresar" >Ingresar</button>
+        <button type="button" class="cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+      </div>
+    </form>
+
+    <p class="registro-link">
+      ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+    </p>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

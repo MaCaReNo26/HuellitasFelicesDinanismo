@@ -1,0 +1,124 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #5eb0ce, #156898, #5eb0ce);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 0;
+}
+
+/* === CONTENEDOR DEL FORMULARIO === */
+.form-container {
+    background-color: #ffffffcc;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    margin: 40px 0;
+}
+
+/* === TITULOS === */
+.form-container h1 {
+    color: #3492c8;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+/* === FORMULARIO === */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+}
+
+/* === CAMPOS === */
+label {
+    text-align: left;
+    font-weight: 600;
+    color: #444;
+}
+
+input,
+select {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 2px solid #1a6997;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #033b5c;
+}
+
+/* === BOTONES === */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Botón cancelar */
+.cancelar {
+    background-color: #033b5c;
+    color: #fff;
+}
+
+.cancelar:hover {
+    background-color: #033b5c;
+    transform: scale(1.05);
+}
+
+/* Botón registrarse */
+.registrar {
+    background-color: #59caff;
+    color: #1c1919;
+}
+
+.registrar:hover {
+    background-color: #4fc3f7;
+    transform: scale(1.05);
+}
+
+/*  Diseño responsive */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    input,
+    select {
+        font-size: 0.9rem;
+    }
+}

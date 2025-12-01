@@ -1,0 +1,864 @@
+:root {
+    --celeste-claro: #EAF9FC;
+    --celeste: #CDECF5;
+    --azul-suave: #89CFF0;
+    --azul-medio: #3BAFDA;
+    --azul-oscuro: #024E76;
+    --blanco: #FFFFFF;
+
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+/* ESTILOS GENERALES */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--celeste-claro);
+    color: var(--azul-oscuro);
+    text-align: center;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* ENCABEZADO */
+header {
+    background: linear-gradient(135deg, #1f4e5f, #6c9ebb, #1f4e5f);
+    padding: 25px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #ffffff;
+}
+
+/* NAVEGACIÓN */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #050505;
+}
+
+/* BANNER PRINCIPAL */
+.banner {
+    background: linear-gradient(to right, #6c9ebb, #eaf9fc);
+    padding: 30px 10px;
+    position: relative;
+    min-height: 600px;
+}
+
+.banner h2 {
+    font-size: 55px;
+    color: var(--azul-oscuro);
+    margin: 35px 0;
+}
+
+.banner h2 span {
+    color: var(--azul-medio);
+    font-size: 70px;
+}
+
+.banner button {
+    background-color: var(--azul-medio);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: var(--shadow-md);
+    margin-top: 10px;
+}
+
+.banner button:hover {
+    background-color: var(--azul-oscuro);
+    transform: scale(1.07);
+}
+
+.num {
+    font-size: 50px;
+}
+
+/* Cajita del contador */
+#count {
+    font-size: 50px; /* tu tamaño actual */
+    font-weight: bold;
+    color: var(--azul-medio);
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+    border: 3px solid var(--azul-medio);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#count:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+
+/* PERRITO IZQUIERDO */
+.banner img.perrito {
+    position: absolute;
+    top: 25%;
+    /* Alineación vertical */
+    left: 4%;
+    /* Fijo a la izquierda */
+    width: 300px;
+    transform: translateY(-50%);
+    animation: floating 3s infinite ease-in-out;
+}
+
+/* PERRITO DERECHO */
+.banner img.perrito-derecha {
+    position: absolute;
+    top: 25%;
+    /* Misma altura que el otro perro */
+    right: 4%;
+    /* Fijo a la derecha */
+    width: 300px;
+    transform: translateY(-50%);
+    animation: floating 3s infinite ease-in-out;
+}
+
+
+/* SECCIÓN INICIO */
+.inicio {
+    background: linear-gradient(to right, #6c9ebb, #eaf9fc);
+    padding: 30px 40px;
+    /* antes 50px → ahora más compacto */
+    margin-top: -60px;
+    /* acerca las tarjetas al banner */
+}
+
+.inicio h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+/* TARJETAS CENTRADAS Y EN UNA FILA */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    /* ← CENTRA */
+    align-items: center;
+    flex-wrap: nowrap;
+    /* ← UNA SOLA FILA */
+    gap: 65px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.caja {
+    background-color: var(--blanco);
+    border-radius: 30px;
+    padding: 35px;
+    width: 260px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s;
+}
+
+.caja:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.caja img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.caja button {
+    background-color: var(--azul-medio);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.caja button:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* SECCIÓN NOSOTROS */
+.nosotros {
+    background: linear-gradient(to right, #6c9ebb, #eaf9fc);
+    padding: 50px 30px;
+}
+
+.nosotros h1 {
+    background-color: var(--azul-suave);
+    background-image: url('Hcafe.png');
+    background-repeat: repeat;
+    background-size: 100px;
+    padding: 35px 0;
+    color: var(--azul-oscuro);
+    font-size: 50px;
+}
+
+.contenido-nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.contenido-nosotros .texto {
+    max-width: 810px;
+}
+
+.contenido-nosotros h2 {
+    font-size: 48px;
+    color: var(--azul-oscuro);
+    margin-bottom: 30px;
+}
+
+.contenido-nosotros p {
+    font-size: 27px;
+    line-height: 1.6;
+    color: #033b5c;
+}
+
+.contenido-nosotros img.animales {
+    width: 460px;
+    border-radius: 15px;
+}
+
+.contenido-nosotros img.decoracion {
+    width: 190px;
+}
+
+/* SECCIÓN ADOPCIÓN */
+.carrusel-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.flecha {
+    background: var(--azul-medio);
+    color: white;
+    font-size: 35px;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.flecha:hover {
+    background: var(--azul-oscuro);
+}
+
+.flecha:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.contenedor-mascotas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.adopcion {
+    background: linear-gradient(to right, #6c9ebb, #eaf9fc);
+    padding: 50px 30px;
+}
+
+.adopcion h2 {
+    color: #204f6a;
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+.contenedor-mascotas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.tarjeta {
+    background: #fff8e9;
+    width: 270px;
+    /* MÁS PEQUEÑO */
+    padding: 20px;
+    border-radius: 18px;
+    /* MENOR RADIO */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 25px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.6);
+}
+
+.tarjeta h3 {
+    font-size: 30px;
+    color: var(--azul-oscuro);
+    margin: 12px 0 5px;
+}
+
+.tarjeta p {
+    font-size: 20px;
+    color: #033b5c;
+    margin-bottom: 10px;
+}
+
+.tarjeta button {
+    background: var(--azul-medio);
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tarjeta button:hover {
+    background-color: var(--azul-oscuro);
+}
+/* BOTÓN FLOTANTE  dar en adopcion*/
+.boton-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--azul-medio);
+    color: var(--blanco);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 200;
+}
+
+.boton-flotante:hover {
+    background-color: var(--azul-oscuro);
+    transform: scale(1.05);
+}
+
+/* SECCIÓN DETALLE DE MASCOTA */
+.detalle-mascota {
+    background: linear-gradient(to right, #6c9ebb, #eaf9fc);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.detalle-mascota h1 {
+    background-color: #8b64ff;
+    color: #8b64ff;
+    font-size: 28px;
+    padding: 15px;
+    background-image: url('Hcafe.png');
+    background-repeat: repeat;
+    background-size: 90px;
+}
+
+.tarjeta-detalle {
+    background: #fdfdfd;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 21px auto;
+    max-width: 850px;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    justify-content: center;
+    gap: 35px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease; /*transicion suave*/
+}
+/*animacion levantar tarjeta*/
+.tarjeta-detalle:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.tarjeta-detalle img {
+    width: 100%;  
+    max-width: 450px; 
+    border-radius: 15px;
+    object-fit: cover; 
+}
+
+.texto-detalle {
+    max-width: 340px;
+    text-align: left;
+}
+
+.texto-detalle h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--azul-oscuro);
+}
+
+.texto-detalle h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--azul-medio);
+}
+
+.texto-detalle p {
+    font-size: 20px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.texto-detalle button {
+    background-color: var(--azul-medio);
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.texto-detalle button:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* SECCIÓN CONTACTO */
+
+.gif-contacto {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gif-contacto img {
+    width: 180px; 
+    height: auto;
+    border-radius: 12px;
+}
+
+.contacto {
+    background: linear-gradient(to right, #6c9ebb, #eaf9fc);
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    max-height: 100vh;
+}
+
+.contacto h1 {
+    background-color: var(--azul-suave);
+    color: var(--azul-oscuro);
+    font-size: 32px;
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 10px;
+}
+
+.contacto h2 {
+    color: var(--azul-oscuro);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.bloques-contacto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-bottom: 24px;
+}
+
+.texto-contacto {
+    max-width: 500px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #033b5c;
+}
+
+.mapa iframe {
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+    border: 0;
+}
+
+.footer-contacto {
+    border-top: 2px solid var(--azul-oscuro);
+    max-height: auto;
+}
+
+.redes img {
+    width: 200px;
+    margin-top: 0px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.redes img:hover {
+    transform: scale(1.1);
+}
+
+.correo {
+    margin-top: 5px;
+    font-size: 15px;
+    color: var(--azul-oscuro);
+}
+
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background: linear-gradient(135deg, #1f4e5f, #6c9ebb, #1f4e5f);
+    color: white;
+    padding: 20px 0;
+    font-size: 15px;
+}
+
+.login-acceso {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.login-acceso a {
+    background-color: #57b6ed;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-acceso a:hover {
+    background-color: #57b6ed;
+}
+
+/*  Diseño responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contenedor,
+    .contenedor-mascotas,
+    .bloques-contacto,
+    .tarjeta-detalle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner h2,
+    .banner h3 {
+        font-size: 32px;
+    }
+
+    .banner img {
+        display: none;
+    }
+
+    .caja,
+    .tarjeta,
+    .tarjeta-detalle {
+        width: 90%;
+    }
+
+    .contenido-nosotros,
+    .texto-detalle {
+        text-align: center;
+    }
+
+    .mapa img {
+        width: 100%;
+    }
+}
+
+
+/* cuadro de Finalizacion de adoptar */
+.caja-adopcion {
+    background-color: #fff6e5;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.caja-adopcion h2 {
+    font-size: 32px;
+    color: var(--azul-oscuro);
+    margin-bottom: 20px;
+}
+
+.caja-adopcion h4 {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.cancelar,
+.aceptar,
+.regresar {
+    background-color: var(--azul-medio);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.regresar:hover {
+    background-color: var(--azul-oscuro);
+}
+
+.cancelar:hover {
+    background-color: var(--azul-oscuro);
+}
+
+.aceptar:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* Cuadro Finalizacion de login */
+.caja-login {
+    background-color: #4E8098;
+    border-radius: 15px;
+    padding: 20px 90px;
+    max-width: 500px;
+    margin: 30px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.caja-login h4 {
+    color: #EEF0F2;
+}
+
+.caja-login h3 {
+    color: #373D20;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.info-usuario {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #000000;
+    text-align: middle;
+    background: #EEF0F2;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-usuario p {
+    margin-bottom: 10px;
+}
+
+.foto-perfil {
+    display: block;
+    margin: 20px auto 0;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #3c8cba;
+}
+
+.caja-login h2 {
+    font-size: 32px;
+    color: var(--azul-oscuro);
+    margin-bottom: 20px;
+}
+
+/*Cuadro que indica que estemos logueados*/
+.usuario-header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffffd0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.foto-usuario-header {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3c8cba;
+}
+
+.logout-btn {
+    background-color: #ff5959;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #d63c3c;
+}
+
+/*Cuadro de registro de mascota*/
+.cuadroMascota {
+    width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.cuadroMascota h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.cuadro-mascota p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #444;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.cuadro-mascota strong {
+    color: var(--azul-medio);
+}
+
+/* Imagen de mascota */
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-top: 15px;
+    border: 3px solid var(--azul-medio);
+}
+
+/* Botón */
+.regresar {
+    margin-top: 20px;
+    padding: 12px 22px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    background: var(--azul-medio);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.regresar:hover {
+    background: var(--azul-oscuro);
+}

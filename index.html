@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Huellitas Felices</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>HUELLITAS FELICES</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="informacion.html">INFORMACIÓN</a></li>
+        <li><a href="adopta.html">ADOPTA</a></li>
+        <li><a href="contacto.html">CONTACTOS</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+    </nav>
+    <!-- Mostrar perfil -->
+    <div class="usuario-header" id="usuarioHeader" style="display:none;">
+      <img id="fotoUsuarioHeader" class="foto-usuario-header" alt="Foto usuario">
+      <span id="nombreUsuarioHeader"></span>
+      <button class="logout-btn" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <!-- SECCION PRINCIPAL -->
+  <section class="banner">
+    <h2>Cada minuto que pasa,</h2>
+    <div>
+      <h2>un perrito sigue esperando ...</h2>
+      <div id="count" class="num">0</div>
+    </div>
+  <h2><span><i>¡ADOPTA HOY!</i></span></h2>
+    <button onclick="window.location.href='informacion.html'">INFORMACIÓN</button>
+    <img src="IMAGENES HF/golden.png" alt="Perrito feliz" class="perrito">
+    <img src="IMAGENES HF/Dog.gif" width="90px" alt="Corazón con huella" class="perrito-derecha">
+  </section>
+
+  <script>
+    let n = 0;
+    const cont = document.getElementById('count');
+
+    setInterval(() => {
+      n += Math.random() < 0.5 ? 1 : 2;
+      cont.textContent = n;
+    }, 10000)
+
+  </script>
+
+  <!-- SECCION INICIO -->
+  <section class="inicio">
+    <h2>INICIO</h2>
+    <div class="contenedor">
+      <div class="caja">
+        <img src="IMAGENES HF/casita.png" alt="Casita">
+        <button onclick="window.location.href='informacion.html'">INFORMACIÓN</button>
+      </div>
+
+      <div class="caja">
+        <img src="IMAGENES HF/Crosado.png" alt="Corazón">
+        <button onclick="window.location.href='contacto.html'">CAMBIA UNA VIDA</button>
+      </div>
+
+      <div class="caja">
+        <img src="IMAGENES HF/Gblanco.png" alt="Gatito feliz">
+        <button onclick="window.location.href='adopta.html'">CONOCE A NUESTROS PELUDOS</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Huellitas Felices - Todos los derechos reservados 🐾</p>
+  </footer>
+  <!-- Script -->
+  <script src="main.js"></script>
+</body>
+
+</html>
